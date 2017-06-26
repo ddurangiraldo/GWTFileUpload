@@ -23,3 +23,6 @@ hs_err_pid*
 
 /gwt-unitCache
 /target
+.classpath
+.project
+.settings
