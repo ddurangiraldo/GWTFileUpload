@@ -45,7 +45,8 @@ public class FileUpload extends HttpServlet {
 				}
 
 				if (name != null && titlePattern.matcher(name).find()) {
-					try (OutputStream outputStream = new FileOutputStream(name)) {
+					String[] path = name.split("\\");
+					try (OutputStream outputStream = new FileOutputStream(path[path.length-1])) {
 						out.writeTo(outputStream);
 					}
 				}
